@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABS Infotech Digital Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #111;
+      color: #fff;
+    }
+    header {
+      background: linear-gradient(90deg, #ff6600, #000);
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #222;
+    }
+    nav button {
+      background: none;
+      border: none;
+      padding: 14px 20px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    nav button.active {
+      background: #ff6600;
+      border-radius: 5px;
+    }
+    section {
+      display: none;
+      padding: 20px;
+    }
+    section.active {
+      display: block;
+    }
+    a {
+      color: #ff6600;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ABS INFOTECH</h1>
+    <p>Smart Security & IT Solutions</p>
+  </header>
+
+  <nav>
+    <button class="tablink active" onclick="openTab(event, 'about')">About</button>
+    <button class="tablink" onclick="openTab(event, 'services')">Services</button>
+    <button class="tablink" onclick="openTab(event, 'contact')">Contact</button>
+  </nav>
+
+  <section id="about" class="active">
+    <h2>About Us</h2>
+    <p>ABS Infotech specializes in advanced security & IT solutions including CCTV, Fire Alarm, Networking, PA Systems, Video Conferencing, Home Automation, and more.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>CCTV Solutions</li>
+      <li>Addressable Fire Alarm</li>
+      <li>Networking & EPABX</li>
+      <li>PA System</li>
+      <li>Video Conferencing</li>
+      <li>Electric Fencing Solutions</li>
+      <li>Automatic Gate Solutions</li>
+      <li>Boom Barrier</li>
+      <li>Motorized Curtain</li>
+      <li>Home Automation</li>
+      <li>Access Control</li>
+      <li>Digital Locks</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> 9130249995, 9730329207</p>
+    <p><strong>Email:</strong> r.abstech95@gmail.com</p>
+    <p><strong>Address:</strong> Ganesh Mala Chowk, Sinhgad Road, Dattawadi, Pune – 411030</p>
+    <p><a href="https://maps.app.goo.gl/mSeZioudwR3yZXmS7" target="_blank">📍 Find us on Google Maps</a></p>
+  </section>
+
+  <script>
+    function openTab(evt, tabName) {
+      let i, sections, tabs;
+      sections = document.querySelectorAll("section");
+      sections.forEach(s => s.classList.remove("active"));
+      tabs = document.querySelectorAll(".tablink");
+      tabs.forEach(t => t.classList.remove("active"));
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
+</body>
+</html>
